@@ -18,7 +18,7 @@
 <header class="desktop-header-1 light d-flex align-items-start flex-column">
     <div class="site-logo">
         <a class="text-decoration-none" href="/">
-            <h1>Arie<span class="text-danger">.</span></h1>
+            <h1>Arie.</h1>
         </a>
     </div>
 
@@ -26,19 +26,19 @@
     <nav>
         <ul class="vertical-menu scrollspy">
             <li class="active">
-                <a href="#home"><i class="text-dark icon-home"></i>Home</a>
+                <a href="#home"><i class="text-dark"></i>Home</a>
             </li>
             <li>
-                <a href="#about"><i class="text-dark icon-user-following"></i>About</a>
+                <a href="#about"><i class="text-dark"></i>About</a>
             </li>
             <li>
-                <a href="#experience"><i class="text-dark icon-graduation"></i>Experience</a>
+                <a href="#experiences"><i class="text-dark"></i>Experiences</a>
             </li>
             <li>
-                <a href="#works"><i class="text-dark icon-layers"></i>Works</a>
+                <a href="#projects"><i class="text-dark"></i>Projects</a>
             </li>
             <li>
-                <a href="#contact"><i class="text-dark icon-bubbles"></i>Contact</a>
+                <a href="#contact"><i class="text-dark"></i>Contact</a>
             </li>
         </ul>
     </nav>

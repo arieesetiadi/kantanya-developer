@@ -41,9 +41,13 @@ i.fa-brands {
     box-shadow: 0 32px 15px -28px #000000;
 }
 
-img.service-image{
+img.service-image {
     width: 5rem;
     height: 5rem;
+}
+
+.bg-white {
+    background-color: white !important;
 }
 
 /* Mobile */
