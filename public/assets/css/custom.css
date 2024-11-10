@@ -1,0 +1,64 @@
+body,
+body .mfp-wrap {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar,
+body header::-webkit-scrollbar,
+body .mfp-wrap::-webkit-scrollbar {
+    width: 0;
+}
+
+body::-webkit-scrollbar-thumb,
+body header::-webkit-scrollbar-thumb,
+body .mfp-wrap::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body::-moz-scrollbar,
+body header::-moz-scrollbar,
+body .mfp-wrap::-moz-scrollbar {
+    width: 0;
+}
+
+body::-moz-scrollbar-thumb,
+body header::-moz-scrollbar-thumb,
+body .mfp-wrap::-moz-scrollbar-thumb {
+    background-color: transparent;
+}
+
+i.fa-brands {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.shadow-bottom {
+    -webkit-box-shadow: 0 32px 15px -28px #000000;
+    -moz-box-shadow: 0 32px 15px -28px #000000;
+    box-shadow: 0 32px 15px -28px #000000;
+}
+
+img.service-image{
+    width: 5rem;
+    height: 5rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .w-xs-100 {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /*  */
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    /*  */
+}
