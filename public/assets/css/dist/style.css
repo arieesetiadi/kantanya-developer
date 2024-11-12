@@ -860,10 +860,10 @@ footer.footer.light {
 
 .white-popup {
     background: #fff;
-    border-radius: 25px;
+    border-radius: 4px !important;
     padding: 30px;
     text-align: left;
-    max-width: 650px;
+    max-width: 850px;
     margin: 40px auto;
     position: relative
 }

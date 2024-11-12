@@ -50,6 +50,16 @@ img.service-image {
     background-color: white !important;
 }
 
+.white-popup {
+    background: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: left;
+    max-width: 850px;
+    margin: 40px auto;
+    position: relative;
+}
+
 /* Mobile */
 @media screen and (max-width: 767px) {
     .w-xs-100 {

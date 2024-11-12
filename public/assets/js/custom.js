@@ -7,6 +7,10 @@ $(function () {
     // Initiate Preloader
     $("#preloader").delay(100).fadeOut('slow');
 
+    $('.btn-mfp-close').click(function () {
+        $('.mfp-close').trigger('click');
+    });
+
     const bolbyPopup = function () {
         $('.work-content').magnificPopup({
             type: 'inline',
