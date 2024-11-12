@@ -15,12 +15,9 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->enum('type', array_map(fn(ProjectType $type) => $type->value, ProjectType::cases()));
-            $table->string('title_id');
-            $table->string('title_en');
-            $table->string('headline_id');
-            $table->string('headline_en');
-            $table->text('description_id');
-            $table->text('description_en');
+            $table->string('title');
+            $table->string('headline');
+            $table->text('description');
             $table->json('images');
             $table->tinyInteger('sort_order');
             $table->boolean('is_published')->default(true);

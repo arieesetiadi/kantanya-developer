@@ -15,11 +15,9 @@ return new class extends Migration
         Schema::create('experiences', function (Blueprint $table) {
             $table->id();
             $table->enum('type', array_map(fn(ExperienceType $type) => $type->value, ExperienceType::cases()));
-            $table->string('title_id');
-            $table->string('title_en');
+            $table->string('title');
             $table->string('place');
-            $table->string('role_id');
-            $table->string('role_en');
+            $table->string('role');
             $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->boolean('is_published')->default(true);

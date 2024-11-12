@@ -15,10 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('headline');
-            $table->text('about_id');
-            $table->text('about_en');
-            $table->string('resume_path_id');
-            $table->string('resume_path_en');
+            $table->text('about');
+            $table->string('resume_path');
             $table->string('email');
             $table->string('phone');
             $table->string('instagram_url');

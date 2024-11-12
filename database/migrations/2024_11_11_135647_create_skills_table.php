@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
-            $table->string('title_id');
-            $table->string('title_en');
-            $table->string('description_id');
-            $table->string('description_en');
+            $table->string('title');
+            $table->string('description');
             $table->string('icon_path');
             $table->tinyInteger('sort_order');
             $table->boolean('is_published')->default(true);
