@@ -44,11 +44,10 @@
                         security.
                     </p>
 
-                    <div class="d-block d-md-flex justify-content-between gap-2">
-                        <a class="btn btn-default w-100 mt-2" href="https://github.com/arieesetiadi/damamaya-app"
-                            target="_blank">
-                            Check on Github
-                        </a>
+                    <div class="d-block d-md-flex justify-content-end gap-2">
+                        <button class="btn btn-default btn-mfp-close mt-2">
+                            Close
+                        </button>
                     </div>
                 </div>
             </div>
