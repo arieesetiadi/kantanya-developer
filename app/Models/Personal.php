@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Personal extends Model
 {
@@ -14,23 +15,22 @@ class Personal extends Model
         parent::boot();
 
         static::updating(function (self $model) {
-            if ($model->isDirty('resume_path_id') && ($model->getOriginal('resume_path_id') !== null)) {
-                Storage::delete($model->getOriginal('resume_path_id'));
-            }
-
-            if ($model->isDirty('resume_path_en') && ($model->getOriginal('resume_path_en') !== null)) {
-                Storage::delete($model->getOriginal('resume_path_en'));
+            if ($model->isDirty('resume_path') && ($model->getOriginal('resume_path') !== null)) {
+                Storage::delete($model->getOriginal('resume_path'));
             }
         });
 
         static::deleted(function (self $model) {
-            if ($model->getOriginal('resume_path_id') !== null) {
-                Storage::delete($model->getOriginal('resume_path_id'));
-            }
-
-            if ($model->getOriginal('resume_path_en') !== null) {
-                Storage::delete($model->getOriginal('resume_path_en'));
+            if ($model->getOriginal('resume_path') !== null) {
+                Storage::delete($model->getOriginal('resume_path'));
             }
         });
+    }
+
+    protected function resumeUrl(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => asset('storage/' . $this->resume_path),
+        );
     }
 }
