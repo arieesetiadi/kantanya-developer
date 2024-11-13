@@ -600,7 +600,7 @@ section.home.light .intro span {
 
 .btn-default:hover {
     color: #fff;
-    background: #23232fdd;
+    background: #2d2d39;
 }
 
 .shadow-dark {
@@ -767,7 +767,7 @@ footer.footer.light {
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     -webkit-box-shadow: 0 0 1px transparent;
-    box-shadow: 0 0 1px transparent
+    box-shadow: 0 0 1px transparent;
 }
 
 .btn:disabled {
