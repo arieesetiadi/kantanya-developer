@@ -6,9 +6,12 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Builder;
+use IbrahimBougaoua\FilamentSortOrder\Traits\SortOrder;
 
 class Skill extends Model
 {
+    use SortOrder;
+
     protected static function boot()
     {
         parent::boot();
