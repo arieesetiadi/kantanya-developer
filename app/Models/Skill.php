@@ -29,7 +29,7 @@ class Skill extends Model
     protected function iconUrl(): Attribute
     {
         return Attribute::make(
-            get: fn() => asset('storage/' . $this->image_path),
+            get: fn() => asset('storage/' . $this->icon_path),
         );
     }
 

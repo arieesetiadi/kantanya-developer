@@ -20,7 +20,7 @@ class SkillSeeder extends Seeder
         $skills = [
             [
                 'title' => 'Frontend Development',
-                'description' => 'Membuat UI yang menarik dengan HTML, CSS, dan JavaScript',
+                'description' => 'Crafting engaging UI with HTML, CSS, and JavaScript',
                 'sort_order' => 1,
                 'icon_path' => $this->createAsset(
                     filePath: public_path('/assets/images/icons/service-1.svg'),
@@ -29,7 +29,7 @@ class SkillSeeder extends Seeder
             ],
             [
                 'title' => 'Backend Development',
-                'description' => 'Mengembangkan sistem backend dengan Framework Laravel',
+                'description' => 'Building robust backend systems with Laravel Framework',
                 'sort_order' => 2,
                 'icon_path' => $this->createAsset(
                     filePath: public_path('/assets/images/icons/service-2.svg'),

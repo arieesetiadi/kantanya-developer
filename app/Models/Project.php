@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ProjectType;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;
@@ -59,10 +60,17 @@ class Project extends Model
         ];
     }
 
+    protected function typeName(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => ProjectType::tryFrom($this->type)?->label(),
+        );
+    }
+
     protected function imageUrls(): Attribute
     {
         return Attribute::make(
-            get: fn() => array_map(fn(string $imagePath) => asset('storage/' . $imagePath), array_reverse($this->images)),
+            get: fn() => array_map(fn(string $imagePath) => asset('storage/' . $imagePath), ($this->images)),
         );
     }
 

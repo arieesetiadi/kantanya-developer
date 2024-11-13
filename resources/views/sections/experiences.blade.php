@@ -1,95 +1,53 @@
-<section id="experiences">
-    <div class="container">
-        <h2 class="section-title">
-            Experiences.
-        </h2>
+@use(App\Enums\ExperienceType)
 
-        <div class="spacer" data-height="60"></div>
+@if (!empty($experiences[ExperienceType::Work->value]) || !empty($experiences[ExperienceType::Education->value]))
+    <section id="experiences">
+        <div class="container">
+            <h2 class="section-title">
+                Experiences.
+            </h2>
 
-        <div class="row">
-            <div class="col-md-6 bg-white">
-                <div class="spacer d-md-none d-lg-none" data-height="30"></div>
-                
-                {{-- Timeline Wrapper --}}
-                <div class="timeline exp shadow-dark padding-30 overflow-hidden rounded">
-                    {{-- Timeline Item --}}
-                    <div class="timeline-container">
-                        <div class="content">
-                            <span class="time">2023 - Present</span>
-                            <div class="d-flex align-items-center gap-2">
-                                <img width="20" height="20" src="{{ asset('assets/images/icons/briefcase-line.svg') }}" alt="Briefcase icon">
-                                <h3 class="title">
-                                    Full-time Web Developer
-                                </h3>
+            <div class="spacer" data-height="60"></div>
+
+            <div class="row">
+                @foreach ([ExperienceType::Work->value, ExperienceType::Education->value] as $type)
+                    @if (!empty($experiences[$type]))
+                        <div class="col-md-6 bg-white">
+                            <div class="spacer d-md-none d-lg-none" data-height="30"></div>
+                            <div class="timeline exp shadow-dark padding-30 overflow-hidden rounded">
+                                @foreach ($experiences[$type] as $experience)
+                                    <div class="timeline-container">
+                                        <div class="content">
+                                            <span class="time">{{ $experience->timeline }}</span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                @if ($type == ExperienceType::Work->value)
+                                                    <img width="20" height="20"
+                                                        src="{{ asset('assets/images/icons/briefcase-line.svg') }}"
+                                                        alt="Briefcase icon">
+                                                @else
+                                                    <img width="20" height="20"
+                                                        src="{{ asset('assets/images/icons/graduation-cap-line.svg') }}"
+                                                        alt="Graduation cap icon">
+                                                @endif
+
+                                                <h3 class="title">
+                                                    {{ $experience->title ?? '' }}
+                                                </h3>
+                                            </div>
+                                            <p>
+                                                {{ $experience->place ?? '' }}<br />
+                                                {{ $experience->role ?? '' }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                                <span class="line"></span>
                             </div>
-                            <p>
-                                PT Eannovate Creative Technology<br />
-                                Backend Developer | Laravel
-                            </p>
                         </div>
-                    </div>
-                    
-                    {{-- Timeline Item --}}
-                    <div class="timeline-container">
-                        <div class="content">
-                            <span class="time">2020 - Present</span>
-                            <div class="d-flex align-items-center gap-2">
-                                <img width="20" height="20" src="{{ asset('assets/images/icons/briefcase-line.svg') }}" alt="Briefcase icon">
-                                <h3 class="title">
-                                    Part-time Freelance
-                                </h3>
-                            </div>
-                            <p>
-                                Work from Home<br />
-                                Fullstack Web Developer | Laravel
-                            </p>
-                        </div>
-                    </div>
-
-                    {{-- main line --}}
-                    <span class="line"></span>
-                </div>
-            </div>
-
-            <div class="col-md-6 bg-white">
-                <div class="timeline edu shadow-dark padding-30 overflow-hidden rounded">
-                    {{-- Timeline Item --}}
-                    <div class="timeline-container">
-                        <div class="content">
-                            <span class="time">2018 - 2022</span>
-                            <div class="d-flex align-items-center gap-2">
-                                <img width="20" height="20" src="{{ asset('assets/images/icons/graduation-cap-line.svg') }}" alt="Graduation cap icon">
-                                <h3 class="title">
-                                    College
-                                </h3>
-                            </div>
-                            <p>
-                                ITB STIKOM Bali <br />
-                                Enterprise System Major
-                            </p>
-                        </div>
-                    </div>
-                    
-                    {{-- Timeline Item --}}
-                    <div class="timeline-container">
-                        <div class="content">
-                            <span class="time">2015 - 2018</span>
-                            <div class="d-flex align-items-center gap-2">
-                                <img width="20" height="20" src="{{ asset('assets/images/icons/graduation-cap-line.svg') }}" alt="Graduation cap icon">
-                                <h3 class="title">
-                                    Vocational School
-                                </h3>
-                            </div>
-                            <p>
-                                SMK Wira Harapan <br />
-                                Computer Engineering & Network
-                            </p>
-                        </div>
-                    </div>
-
-                    <span class="line"></span>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
-    </div>
-</section>
+    </section>
+@endif

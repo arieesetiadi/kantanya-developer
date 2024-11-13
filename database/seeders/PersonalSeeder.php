@@ -20,7 +20,7 @@ class PersonalSeeder extends Seeder
         Personal::create([
             'name' => 'Arie Setiadi',
             'headline' => 'Web Developer',
-            'about' => "Saya adalah seorang pengembang web dengan pengalaman 2 tahun dalam pemrograman. Mahir dalam Laravel dan pengembangan backend. Terbukti mampu bekerja baik dalam tim dan menghasilkan kode berkualitas tinggi. Selalu siap menghadapi tantangan dan berkomitmen untuk mengikuti tren teknologi terbaru. Saya mampu melakukan coding, debugging, dan troubleshooting, serta dapat bekerja baik secara mandiri maupun dalam tim.",
+            'about' => "Enthusiastic coder with 3+ years of experience, focusing on building solid fullstack web apps and efficient backend APIs for smooth frontend integration. I excel at using various tools to bring creative ideas to reality and love tackling tough problems with clean, user-friendly code.",
             'resume_path' => $this->createAsset(
                 filePath: public_path('/assets/resumes/resume.pdf'),
                 uploadPath: UploadPath::ResumeFiles->value

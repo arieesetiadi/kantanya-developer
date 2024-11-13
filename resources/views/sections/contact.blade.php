@@ -16,9 +16,9 @@
                                 alt="Email icon">
                         </td>
                         <td>
-                            <a class="text-dark text-decoration-none" href="mailto:ariee.setiadi@gmail.com"
+                            <a class="text-dark text-decoration-none" href="mailto:{{ $personal->email }}"
                                 target="_blank">
-                                ariee.setiadi@gmail.com
+                                {{ $personal->email }}
                             </a>
                         </td>
                     </tr>
@@ -30,8 +30,9 @@
                                 alt="Whatsapp icon">
                         </td>
                         <td>
-                            <a class="text-dark text-decoration-none" href="https://wa.link/3b83dp" target="_blank">
-                                +62 821 4633 5727
+                            <a class="text-dark text-decoration-none" href="{{ $personal->whatsapp_url }}"
+                                target="_blank">
+                                {{ $personal->phone }}
                             </a>
                         </td>
                     </tr>
@@ -43,9 +44,9 @@
                                 alt="Instagram icon">
                         </td>
                         <td>
-                            <a class="text-dark text-decoration-none" href="https://www.instagram.com/arieesetiadi"
+                            <a class="text-dark text-decoration-none" href="{{ $personal->instagram_url }}"
                                 target="_blank">
-                                arieesetiadi
+                                {{ $personal->instagram_username }}
                             </a>
                         </td>
                     </tr>
@@ -57,9 +58,9 @@
                                 src="{{ asset('assets/images/icons/github-original.svg') }}" alt="Github icon">
                         </td>
                         <td>
-                            <a class="text-dark text-decoration-none" href="https://github.com/arieesetiadi"
+                            <a class="text-dark text-decoration-none" href="{{ $personal->github_url }}"
                                 target="blank">
-                                arieesetiadi
+                                {{ $personal->github_username }}
                             </a>
                         </td>
                     </tr>
@@ -71,9 +72,9 @@
                                 alt="Codewars icon">
                         </td>
                         <td>
-                            <a class="text-dark text-decoration-none" href="https://www.codewars.com/users/arieesetiadi"
+                            <a class="text-dark text-decoration-none" href="{{ $personal->codewars_url }}"
                                 target="blank">
-                                Codewars (arieesetiadi)
+                                Codewars ({{ $personal->codewars_username }})
                             </a>
                         </td>
                     </tr>
@@ -85,9 +86,9 @@
                                 src="{{ asset('assets/images/icons/linkedin-original.svg') }}" alt="Linkedin icon">
                         </td>
                         <td>
-                            <a class="text-dark text-decoration-none" href="https://www.linkedin.com/in/arieesetiadi/"
+                            <a class="text-dark text-decoration-none" href="{{ $personal->linkedin_url }}"
                                 target="blank">
-                                Arie Setiadi
+                                {{ $personal->linkedin_username }}
                             </a>
                         </td>
                     </tr>
