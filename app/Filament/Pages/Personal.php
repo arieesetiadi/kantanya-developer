@@ -21,6 +21,8 @@ class Personal extends Page implements HasForms
 {
     use InteractsWithForms;
 
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $navigationIcon = 'heroicon-o-user-circle';
 
     protected static string $view = 'filament.pages.personal';

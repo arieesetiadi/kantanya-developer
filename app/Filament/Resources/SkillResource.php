@@ -29,6 +29,8 @@ class SkillResource extends Resource
 {
     protected static ?string $model = Skill::class;
 
+    protected static ?int $navigationSort = 2;
+
     protected static ?string $navigationIcon = 'heroicon-o-bolt';
 
     public static function form(Form $form): Form
@@ -55,7 +57,7 @@ class SkillResource extends Resource
                     ->rules(['required', 'file', 'max:2048'])
                     ->imageEditor(),
 
-                Toggle::make('is_published'),
+                Toggle::make('is_published')->default(true),
             ]);
     }
 
