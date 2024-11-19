@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
-use App\Enums\ProjectType;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Builder;
+use IbrahimBougaoua\FilamentSortOrder\Traits\SortOrder;
+use App\Enums\ProjectType;
 
 class Project extends Model
 {
+    use SortOrder;
+
     protected static function boot()
     {
         parent::boot();

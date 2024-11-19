@@ -54,7 +54,7 @@
                             @endif
 
                             <div>
-                                {{ $project->description ?? '' }}
+                                {!! $project->description ?? '' !!}
                             </div>
 
                             <div class="d-block d-md-flex">

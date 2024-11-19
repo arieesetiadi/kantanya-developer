@@ -7,3 +7,10 @@ new Swiper(".project-swiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+$(function () {
+    $('.work-content').on('mfpOpen', function () {
+        const modal = $($.magnificPopup.instance.content);
+        modal.find('a').attr("target", "_blank");
+    });
+});
