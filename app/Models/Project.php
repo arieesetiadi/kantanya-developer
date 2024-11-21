@@ -73,7 +73,7 @@ class Project extends Model
     protected function imageUrls(): Attribute
     {
         return Attribute::make(
-            get: fn() => array_map(fn(string $imagePath) => asset('storage/' . $imagePath), ($this->images)),
+            get: fn() => array_reverse(array_map(fn(string $imagePath) => asset('storage/' . $imagePath), ($this->images))),
         );
     }
 
