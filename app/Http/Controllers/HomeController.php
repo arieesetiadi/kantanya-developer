@@ -38,7 +38,7 @@ class HomeController extends Controller
 
         $projects = Project
             ::published()
-            ->take(4)
+            // ->take(4)
             ->orderBy('sort_order')
             ->get();
 
