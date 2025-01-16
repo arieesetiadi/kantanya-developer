@@ -1,7 +1,7 @@
 <div class="light" id="preloader"></div>
 
 {{-- Mobile Header --}}
-<header class="mobile-header-1 light">
+{{-- <header class="mobile-header-1 light">
     <div class="container">
         <div class="menu-icon d-inline-flex me-4">
             <button>
@@ -12,7 +12,7 @@
             </button>
         </div>
     </div>
-</header>
+</header> --}}
 
 {{-- Desktop Header --}}
 <header class="desktop-header-1 light d-flex align-items-start flex-column">

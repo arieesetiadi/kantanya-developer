@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('headline');
             $table->text('about');
-            $table->string('resume_path');
+            $table->string('resume_path')->nullable();
             $table->string('email');
             $table->string('phone');
             $table->string('instagram_url');
