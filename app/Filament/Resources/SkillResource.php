@@ -50,11 +50,12 @@ class SkillResource extends Resource
                 FileUpload::make('icon_path')
                     ->label('Icon')
                     ->directory(fn() => UploadPath::SkillImages->value)
+                    ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])  // Add this line
                     ->markAsRequired()
                     ->columnSpanFull()
                     ->image()
                     ->optimize('webp')
-                    ->rules(['required', 'file', 'max:2048'])
+                    ->rules(['required', 'file', 'max:2048', 'mimes:png,jpg,jpeg,webp'])  // Modify this line
                     ->imageEditor(),
 
                 Toggle::make('is_published')->default(true),
