@@ -69,26 +69,21 @@ class Personal extends Page implements HasForms
                             ->rules(['required', 'string', 'max:255']),
 
                         TextInput::make('instagram_url')
-                            ->markAsRequired()
-                            ->rules(['required', 'string', 'max:255']),
+                            ->rules(['nullable', 'string', 'max:255']),
 
                         TextInput::make('github_url')
-                            ->markAsRequired()
-                            ->rules(['required', 'string', 'max:255']),
+                            ->rules(['nullable', 'string', 'max:255']),
 
                         TextInput::make('linkedin_url')
-                            ->markAsRequired()
-                            ->rules(['required', 'string', 'max:255']),
+                            ->rules(['nullable', 'string', 'max:255']),
 
                         TextInput::make('codewars_url')
-                            ->markAsRequired()
-                            ->rules(['required', 'string', 'max:255']),
+                            ->rules(['nullable', 'string', 'max:255']),
 
                         FileUpload::make('resume_path')
                             ->label('Resume')
                             ->directory(fn() => UploadPath::ResumeFiles->value)
-                            ->markAsRequired()
-                            ->rules(['required', 'file', 'max:2048'])
+                            ->rules(['nullable', 'file', 'max:2048'])
                             ->columnSpanFull(),
                     ]),
                 ])

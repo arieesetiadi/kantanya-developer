@@ -9,25 +9,33 @@
 
             {{-- Social Icons --}}
             <ul class="social-icons light list-inline mb-0 mt-4">
-                <li class="list-inline-item">
-                    <a href="{{ $personal->linkedin_url }}" aria-label="Visit the LinkedIn account"
-                        target="_blank">
-                        <img width="20" height="20"
-                            src="{{ asset('assets/images/icons/linkedin-original.svg') }}" alt="LinkedIn icon" />
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="{{ $personal->whatsapp_url }}" aria-label="Get in touch via Whatsapp" target="_blank">
-                        <img width="20" height="20" src="{{ asset('assets/images/icons/whatsapp.svg') }}"
-                            alt="WhatsApp icon" />
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="{{ $personal->github_url }}" aria-label="Visit the GitHub account" target="_blank">
-                        <img width="20" height="20" src="{{ asset('assets/images/icons/github-original.svg') }}"
-                            alt="Github icon" />
-                    </a>
-                </li>
+                @if (!empty($personal->linkedin_url))
+                    <li class="list-inline-item">
+                        <a href="{{ $personal->linkedin_url }}" aria-label="Visit the LinkedIn account"
+                            target="_blank">
+                            <img width="20" height="20"
+                                src="{{ asset('assets/images/icons/linkedin-original.svg') }}" alt="LinkedIn icon" />
+                        </a>
+                    </li>
+                @endif
+
+                @if (!empty($personal->whatsapp_url))
+                    <li class="list-inline-item">
+                        <a href="{{ $personal->whatsapp_url }}" aria-label="Get in touch via Whatsapp" target="_blank">
+                            <img width="20" height="20" src="{{ asset('assets/images/icons/whatsapp.svg') }}"
+                                alt="WhatsApp icon" />
+                        </a>
+                    </li>
+                @endif
+                
+                @if (!empty($personal->github_url))
+                    <li class="list-inline-item">
+                        <a href="{{ $personal->github_url }}" aria-label="Visit the GitHub account" target="_blank">
+                            <img width="20" height="20" src="{{ asset('assets/images/icons/github-original.svg') }}"
+                                alt="Github icon" />
+                        </a>
+                    </li>
+                @endif
             </ul>
 
             <div class="mt-4">

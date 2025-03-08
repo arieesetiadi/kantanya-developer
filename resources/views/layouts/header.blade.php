@@ -16,9 +16,9 @@
 
 {{-- Desktop Header --}}
 <header class="desktop-header-1 light d-flex align-items-start flex-column">
-    <div class="site-logo">
+    <div class="site-logo" style="padding-left: 1.5rem">
         <a class="text-decoration-none" href="/">
-            <h1>Arie.</h1>
+            <img width="75" height="75" src="{{ asset('assets/images/logos/main-black.png') }}" alt="Kantanya logo">
         </a>
     </div>
 
@@ -45,6 +45,6 @@
 
     {{-- Footer --}}
     <div class="footer">
-        <span class="copyright">©<span id="year"></span> Arie Setiadi.</span>
+        <span class="copyright">©<span id="year"></span> Kantanya Developer.</span>
     </div>
 </header>

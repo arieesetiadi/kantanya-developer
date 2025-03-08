@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @push('after-metas')
-    <title>Home - Arie's Portfolio</title>
+    <title>{{ config('app.name') }}</title>
 @endpush
 
 @section('content')

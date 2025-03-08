@@ -38,60 +38,68 @@
                     </tr>
 
                     {{-- Instagram --}}
-                    <tr>
-                        <td>
-                            <img width="18" height="18" src="{{ asset('assets/images/icons/instagram.svg') }}"
-                                alt="Instagram icon">
-                        </td>
-                        <td>
-                            <a class="text-dark text-decoration-none" href="{{ $personal->instagram_url }}"
-                                target="_blank">
-                                {{ $personal->instagram_username }}
-                            </a>
-                        </td>
-                    </tr>
+                    @if (!empty($personal->instagram_url))
+                        <tr>
+                            <td>
+                                <img width="18" height="18" src="{{ asset('assets/images/icons/instagram.svg') }}"
+                                    alt="Instagram icon">
+                            </td>
+                            <td>
+                                <a class="text-dark text-decoration-none" href="{{ $personal->instagram_url }}"
+                                    target="_blank">
+                                    {{ $personal->instagram_username }}
+                                </a>
+                            </td>
+                        </tr>
+                    @endif
 
                     {{-- Github --}}
-                    <tr>
-                        <td>
-                            <img width="18" height="18"
-                                src="{{ asset('assets/images/icons/github-original.svg') }}" alt="Github icon">
-                        </td>
-                        <td>
-                            <a class="text-dark text-decoration-none" href="{{ $personal->github_url }}"
-                                target="blank">
-                                {{ $personal->github_username }}
-                            </a>
-                        </td>
-                    </tr>
+                    @if (!empty($personal->github_url))
+                        <tr>
+                            <td>
+                                <img width="18" height="18"
+                                    src="{{ asset('assets/images/icons/github-original.svg') }}" alt="Github icon">
+                            </td>
+                            <td>
+                                <a class="text-dark text-decoration-none" href="{{ $personal->github_url }}"
+                                    target="blank">
+                                    {{ $personal->github_username }}
+                                </a>
+                            </td>
+                        </tr>
+                    @endif
 
                     {{-- Codewars --}}
-                    <tr>
-                        <td>
-                            <img width="18" height="18" src="{{ asset('assets/images/icons/code.svg') }}"
-                                alt="Codewars icon">
-                        </td>
-                        <td>
-                            <a class="text-dark text-decoration-none" href="{{ $personal->codewars_url }}"
-                                target="blank">
-                                Codewars ({{ $personal->codewars_username }})
-                            </a>
-                        </td>
-                    </tr>
+                    @if (!empty($personal->codewars_url))
+                        <tr>
+                            <td>
+                                <img width="18" height="18" src="{{ asset('assets/images/icons/code.svg') }}"
+                                    alt="Codewars icon">
+                            </td>
+                            <td>
+                                <a class="text-dark text-decoration-none" href="{{ $personal->codewars_url }}"
+                                    target="blank">
+                                    Codewars ({{ $personal->codewars_username }})
+                                </a>
+                            </td>
+                        </tr>
+                    @endif
 
                     {{-- Linkedin --}}
-                    <tr>
-                        <td>
-                            <img width="18" height="18"
-                                src="{{ asset('assets/images/icons/linkedin-original.svg') }}" alt="Linkedin icon">
-                        </td>
-                        <td>
-                            <a class="text-dark text-decoration-none" href="{{ $personal->linkedin_url }}"
-                                target="blank">
-                                {{ $personal->linkedin_username }}
-                            </a>
-                        </td>
-                    </tr>
+                    @if (!empty($personal->linkedin_url))
+                        <tr>
+                            <td>
+                                <img width="18" height="18"
+                                    src="{{ asset('assets/images/icons/linkedin-original.svg') }}" alt="Linkedin icon">
+                            </td>
+                            <td>
+                                <a class="text-dark text-decoration-none" href="{{ $personal->linkedin_url }}"
+                                    target="blank">
+                                    {{ $personal->linkedin_username }}
+                                </a>
+                            </td>
+                        </tr>
+                    @endif
                 </table>
             </div>
         </div>
