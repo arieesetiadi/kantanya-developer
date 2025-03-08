@@ -18,7 +18,7 @@
 <header class="desktop-header-1 light d-flex align-items-start flex-column">
     <div class="site-logo" style="padding-left: 1.5rem">
         <a class="text-decoration-none" href="/">
-            <img width="75" height="75" src="{{ asset('assets/images/logos/main-black.png') }}" alt="Kantanya logo">
+            <img width="75" height="75" src="{{ asset('assets/images/logos/main-black-symbol.png') }}" alt="Kantanya logo">
         </a>
     </div>
 
