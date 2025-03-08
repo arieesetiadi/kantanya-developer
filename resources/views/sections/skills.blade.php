@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-around">
                 @foreach ($skills as $skill)
-                    <div class="col-md-6 col-lg-6 bg-white">
+                    <div class="col-md-6 col-lg-6 bg-white" style="margin-bottom: 1.5rem">
                         <div class="service-box data-background padding-30 shadow-dark rounded text-center">
                             <img class="service-image" src="{{ $skill->icon_url }}"
                                 alt="Icon of {{ $skill->title ?? 'technical' }} skill" />

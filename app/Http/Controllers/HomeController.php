@@ -17,9 +17,7 @@ class HomeController extends Controller
     {
         $personal = Personal::first();
 
-        $skills = Skill::published()
-            ->take(2)
-            ->get();
+        $skills = Skill::published()->get();
 
         $experiences = [
             ExperienceType::Work->value => Experience
